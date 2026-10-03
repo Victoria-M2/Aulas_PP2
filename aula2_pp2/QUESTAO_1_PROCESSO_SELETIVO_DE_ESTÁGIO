@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main(){
+
+    int idade, prog;
+    float media, frequencia;
+
+    printf("Informe a sua idade: \n");
+    scanf("%d", &idade);
+    printf("Informe a sua média acadêmica: \n");
+    scanf("%f", &media);
+    printf("Informe seu percentual de frequência: \n");
+    scanf("%f", &frequencia);
+    printf("Informe se possui conhecimento em programação (digite 1 para SIM e 0 para NÃO): \n");
+    scanf("%d", &prog);
+
+    if(idade < 16){
+        printf("Candidato não possui idade mínima.");
+        return 0;
+    }else if(media >= 8 && frequencia >= 80 && prog == 1){
+        printf("Candidato aprovado diretamente.");
+        return 0;
+    }else if(media >= 7 && frequencia >= 75 && prog == 1){
+        printf("Candidato selecionado para entrevista.");
+        return 0;
+    } else if(media >= 7 && frequencia >= 75 && prog == 0){
+        printf("Candidato direcionado para curso preparatório.");
+        return 0;
+    } else{
+        printf("Candidato não selecionado.");
+    }
+
+return 0;
+}
