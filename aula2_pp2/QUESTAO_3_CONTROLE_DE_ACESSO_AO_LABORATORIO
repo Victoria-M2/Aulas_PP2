@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+
+    int idade, matricula, autorizacao;
+
+    printf("Informe sua idade: \n");
+    scanf("%d", &idade);
+
+    printf("Possui matricula ativa? (1 para SIM e 0 para NÃO): \n");
+    scanf("%d", &matricula);
+
+    printf("Tem autorizaçao do professor? (1 para SIM e 0 para NÃO): \n");
+    scanf("%d", &autorizacao);
+
+    if (idade >= 18 && matricula == 1){
+        printf("Acesso liberado.");
+    } else if(matricula == 1 && autorizacao == 1){
+        printf("Acesso liberado.");
+    } else{
+        printf("Acesso Negado.");
+    }
+ return 0;
+}
